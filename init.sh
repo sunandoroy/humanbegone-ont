@@ -28,10 +28,10 @@ fi
 
 # Placeholder Zenodo URLs
 # Update these links with your actual Zenodo URLs once published.
-URL_KRAKEN="https://zenodo.org/records/19591606/files/kraken_index.tar.gz"
-URL_REF_FASTA="https://zenodo.org/records/19591606/files/T2T_Unique.fna"
-URL_WN_KMER="https://zenodo.org/records/19591606/files/T2T_repetitive_kmers.txt"
-URL_TEST_FILES="https://zenodo.org/records/19591606/files/Test-ont.tar.gz"
+URL_KRAKEN="https://zenodo.org/records/19606373/files/kraken_index.tar.gz"
+URL_REF_FASTA="https://zenodo.org/records/19606373/files/T2T_Unique.fna"
+URL_WN_KMER="https://zenodo.org/records/19606373/files/T2T_repetitive_kmers.txt"
+URL_TEST_FILES="https://zenodo.org/records/19606373/files/Test-ont.tar.gz"
 
 # 2. Download and Extract Kraken2 Index
 echo -e "\n[2/6] Downloading Kraken2 Index..."
@@ -52,7 +52,7 @@ wget "$URL_WN_KMER"
 echo -e "\n[5/6] Downloading Test Files..."
 wget "$URL_TEST_FILES" -O test_files.tar.gz
 echo "Extracting Test Files..."
-tar -xvzf test_files.tar.gz
+tar -xzf test_files.tar.gz
 rm test_files.tar.gz
 
 # 6. Build Minimap2 Index utilizing created Conda Env
